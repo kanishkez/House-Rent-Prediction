@@ -1,0 +1,213 @@
+Last login: Thu Jun 19 12:13:36 on ttys000
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+/Users/kanishkk/house.py:7: SyntaxWarning: invalid escape sequence '\ '
+  df = pd.read_csv("/Users/kanishkk/Documents/House\ Rent\ Prediciton/House_Rent_Dataset.csv" )
+Traceback (most recent call last):
+<unknown>:2: SyntaxWarning: invalid escape sequence '\ '
+<unknown>:1: SyntaxWarning: invalid escape sequence '\ '
+  File "/Users/kanishkk/house.py", line 7, in <module>
+    df = pd.read_csv("/Users/kanishkk/Documents/House\ Rent\ Prediciton/House_Rent_Dataset.csv" )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/kanishkk/Documents/House\\ Rent\\ Prediciton/House_Rent_Dataset.csv'
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+/Users/kanishkk/house.py:7: SyntaxWarning: invalid escape sequence '\ '
+  df = pd.read_csv("/Users/kanishkk/Documents/House\ Rent\ Prediciton/House_Rent_Dataset.csv" )
+Traceback (most recent call last):
+<unknown>:2: SyntaxWarning: invalid escape sequence '\ '
+<unknown>:1: SyntaxWarning: invalid escape sequence '\ '
+  File "/Users/kanishkk/house.py", line 7, in <module>
+    df = pd.read_csv("/Users/kanishkk/Documents/House\ Rent\ Prediciton/House_Rent_Dataset.csv" )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/kanishkk/Documents/House\\ Rent\\ Prediciton/House_Rent_Dataset.csv'
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+Traceback (most recent call last):
+  File "/Users/kanishkk/house.py", line 33, in <module>
+    x1 = scaler_x.fit_transform(x1)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 892, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/preprocessing/_data.py", line 907, in fit
+    return self.partial_fit(X, y, sample_weight)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 1363, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/preprocessing/_data.py", line 943, in partial_fit
+    X = validate_data(
+        self,
+    ...<4 lines>...
+        reset=first_call,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/validation.py", line 2954, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/validation.py", line 971, in check_array
+    array = array.astype(new_dtype)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/generic.py", line 6662, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/internals/managers.py", line 430, in astype
+    return self.apply(
+           ~~~~~~~~~~^
+        "astype",
+        ^^^^^^^^^
+    ...<3 lines>...
+        using_cow=using_copy_on_write(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/internals/managers.py", line 363, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/internals/blocks.py", line 784, in astype
+    new_values = astype_array_safe(values, dtype, copy=copy, errors=errors)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/dtypes/astype.py", line 237, in astype_array_safe
+    new_values = astype_array(values, dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/dtypes/astype.py", line 182, in astype_array
+    values = _astype_nansafe(values, dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/dtypes/astype.py", line 133, in _astype_nansafe
+    return arr.astype(dtype, copy=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Bandel'
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+Epoch: 0 Train Loss: 0.6363226771354675 Test Loss: 0.624539315700531
+Epoch: 100 Train Loss: 0.13126738369464874 Test Loss: 0.39187562465667725
+Epoch: 200 Train Loss: 0.09858648478984833 Test Loss: 0.3722101151943207
+Epoch: 300 Train Loss: 0.09160008281469345 Test Loss: 0.37103626132011414
+Epoch: 400 Train Loss: 0.08819837123155594 Test Loss: 0.37080034613609314
+Epoch: 500 Train Loss: 0.0865463837981224 Test Loss: 0.37054115533828735
+Epoch: 600 Train Loss: 0.0859619751572609 Test Loss: 0.3705669939517975
+Epoch: 700 Train Loss: 0.08574122935533524 Test Loss: 0.3705820143222809
+Epoch: 800 Train Loss: 0.08538907021284103 Test Loss: 0.370663046836853
+Epoch: 900 Train Loss: 0.08495733886957169 Test Loss: 0.3706228733062744
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+Please enter the values for the following features:
+Size: 1100
+Bathroom: 2
+BHK: 2
+Floor_Num: 0
+Area Type: Super Area
+City: Kolkata
+Furnishing Status: Unfurnished
+Tenant Preferred: Bachelors
+Area Locality: Bandel
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+Predicted Rent: ₹13,122.04
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+Please enter the values for the following features:
+Size: 15000
+Bathroom: 2
+BHK: 3
+Floor_Num: 0
+Area Type: Super Area
+City: Kolkata
+Furnishing Status: Unfurnished
+Tenant Preferred: Bachelors
+Area Locality: Behala
+Predicted Rent: ₹170,073.36
+kanishkk@Kanishks-MacBook-Air ~ % python3 house.py
+Please enter the values for the following features:
+Size: 1200
+Bathroom: 2
+BHK: 3
+Floor_Num: 0
+Area Type: Super Area
+City: Kolkata
+Furnishing Status: Unfurnished
+Tenant Preferred: Bachelors
+Area Locality: Behala
+Predicted Rent: ₹20,277.89
+kanishkk@Kanishks-MacBook-Air ~ % vim requirements.txt
+
+
+1. Install dependencies:
+    pip install pandas torch scikit-learn
+
+2. Place `House_Rent_Dataset.csv` in the same directory as `house.py`.
+
+3. Train the model:
+    python3 house.py
+
+4. On completion, it saves the trained weights to `house_rent_model.pth`.
+
+- All categorical columns are one-hot encoded, including `Area Locality`.
+- Floor level is numerically encoded using a custom extractor.
+
+Feel free to build an interface or prediction layer on top of this.
+
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+~                                                                                                                                                                                    
+requirements.txt [+]                                                                                                                                               16,1           All
+-- INSERT --
